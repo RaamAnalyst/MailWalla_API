@@ -9,6 +9,7 @@ API documentation for MailWalla, based on OpenAPI Specification (formerly Swagge
 - Operation parameters input and output for each operation
 
 
-
+# Swagger Link
+https://app.swaggerhub.com/apis/RaamWriter/MailWalla/0.1
 
 
