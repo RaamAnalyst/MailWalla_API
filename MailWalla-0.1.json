@@ -1,0 +1,322 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "MailWalla API",
+    "description": "MailWalla API enables creating login token, accessing lists, and campaigns.",
+    "termsOfService": "https://mailwalla.co.in/",
+    "contact": {
+      "name": "MailWalla",
+      "url": "https://mailwalla.co.in/",
+      "email": "contact@mailwalla.co.in"
+    },
+    "license": {
+      "name": "MailWalla",
+      "url": "https://mailwalla.co.in"
+    },
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://mailwalla.co.in"
+    }
+  ],
+  "paths": {
+    "/app/public/api/v1/campaigns": {
+      "get": {
+        "description": "Retrieves Campaigns List",
+        "parameters": [
+          {
+            "name": "api_token",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "pj0bN50wak2xtVARQw0PPh6S4pMEPy9N0HxIau9SOoBKhG9ygSpiCH6wsaKG"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://mailwalla.co.in"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://mailwalla.co.in"
+        }
+      ]
+    },
+    "/app/public/api/v1/login-token": {
+      "post": {
+        "description": "Create API login token",
+        "parameters": [
+          {
+            "name": "api_token",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "pj0bN50wak2xtVARQw0PPh6S4pMEPy9N0HxIau9SOoBKhG9ygSpiCH6wsaKG"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "text/html; charset=UTF-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://mailwalla.co.in"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://mailwalla.co.in"
+        }
+      ]
+    },
+    "/app/public/api/v1/lists": {
+      "get": {
+        "description": "Retrieves Mail List",
+        "parameters": [
+          {
+            "name": "api_token",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "pj0bN50wak2xtVARQw0PPh6S4pMEPy9N0HxIau9SOoBKhG9ygSpiCH6wsaKG"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "0": {
+                    "value": "[{\"id\":3,\"uid\":\"600d8d61ce944\",\"name\":\"MailWalla\",\"default_subject\":\"MailWalla\",\"from_email\":\"contact@mailwalla.co.in\",\"from_name\":\"MailWalla\",\"status\":null,\"created_at\":\"2021-01-24 15:08:17\",\"updated_at\":\"2021-01-25 14:00:23\"}]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://mailwalla.co.in"
+          }
+        ]
+      },
+      "post": {
+        "description": "Create Mailing List",
+        "parameters": [
+          {
+            "name": "contact%5Bphone%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "9999988888"
+          },
+          {
+            "name": "contact%5Bcity%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "Bangalore"
+          },
+          {
+            "name": "contact%5Baddress_1%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "India"
+          },
+          {
+            "name": "contact%5Bstate%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "Karnataka"
+          },
+          {
+            "name": "contact%5Bzip%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "580023"
+          },
+          {
+            "name": "from_email",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "admin%40technakama.co.in"
+          },
+          {
+            "name": "contact%5Bcountry_id%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "api_token",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "pj0bN50wak2xtVARQw0PPh6S4pMEPy9N0HxIau9SOoBKhG9ygSpiCH6wsaKG"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "technakama"
+          },
+          {
+            "name": "contact%5Bemail%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "xxxyyy%40zzz.com"
+          },
+          {
+            "name": "contact%5Bcompany%5D",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "technakama"
+          },
+          {
+            "name": "from_name",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "technakama"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                },
+                "examples": {
+                  "0": {
+                    "value": "{\"status\":1,\"message\":\"List was successfully created\",\"list_uid\":\"6090cadc8fbfb\"}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "https://mailwalla.co.in"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://mailwalla.co.in"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "list_uid": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}
